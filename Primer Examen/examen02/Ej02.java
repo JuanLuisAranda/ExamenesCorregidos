@@ -1,4 +1,4 @@
-package examen02;
+package parte2;
 
 /**
  * Exámen del 2º Trimestre - 1er exámen

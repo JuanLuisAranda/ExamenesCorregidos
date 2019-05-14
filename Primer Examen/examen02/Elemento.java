@@ -1,4 +1,4 @@
-package examen02;
+package parte2;
 
 /**
  *
@@ -39,6 +39,13 @@ public class Elemento {
   public void setCantidad(int cantidad) {
     this.cantidad = cantidad;
   }
+
+  @Override
+  public String toString() {
+    return  producto + " - " + precio + "€ - " + cantidad + " unidades.";
+  }
+  
+  
   
   
   
