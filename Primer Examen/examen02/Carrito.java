@@ -19,7 +19,7 @@ public class Carrito {
   }
 
   public double importeTotal() {
-    int total = 0;
+    double total = 0;
     for (Elemento e : a) {
        
       total += e.getPrecio() * e.getCantidad();
