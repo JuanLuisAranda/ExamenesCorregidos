@@ -12,10 +12,11 @@ public class Carrito {
 
   public void agrega(Elemento e) {
     boolean encontrado = false;
+    
     for (Elemento elemento : a) {
 
       if (elemento.getProducto().equals(e.getProducto())) {
-        elemento.setCantidad(elemento.getCantidad() + 1);
+        elemento.setCantidad(elemento.getCantidad() + e.getCantidad());
         encontrado = true;
       }
     }
@@ -40,7 +41,7 @@ public class Carrito {
 
   @Override
   public String toString() {
-    String pinta = "";
+    String pinta = "Contenido del carrito\n=====================\n";
     for (Elemento e : a) {
       pinta += e + "\n";
     }

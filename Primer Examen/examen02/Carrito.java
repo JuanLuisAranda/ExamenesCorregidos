@@ -19,6 +19,8 @@ public class Carrito {
   }
 
   public double importeTotal() {
+    
+    
     double total = 0;
     for (Elemento e : a) {
        
@@ -30,7 +32,7 @@ public class Carrito {
 
   @Override
   public String toString() {
-    String pinta = "";
+    String pinta = "Contenido del carrito\n=====================\n";
     for (Elemento e : a) {
       pinta += e +"\n";
     }
