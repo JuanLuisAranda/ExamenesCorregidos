@@ -12,22 +12,23 @@ public class Ex02jlan2 {
     int[] array = new int[10];
     // Relleno el array
     for (int i = 0; i < 10; i++) {
-      array[i] = (int) (Math.random() * 101);
+      array[i] = (int) (Math.random() * 99) + 2;
     }
     for (int i = 0; i < 10; i++) {
+     
       
-      System.out.println(array[i]);
-      
-      if (Ex02jlan2.esPrimo(array[i]) && Ex02jlan2.esCapicua(array[i])) {
-        System.out.println("El número es primo y es capicúa.");
-      } else if (Ex02jlan2.esPrimo(array[i]) && !Ex02jlan2.esCapicua(array[i])) {
-      System.out.println("El número es primo y NO es capicúa.");
-    } else if ( !Ex02jlan2.esPrimo(array[i]) && Ex02jlan2.esCapicua(array[i])) {
-      System.out.println("El número NO es primo y es capicúa.");
-    } else if (!Ex02jlan2.esPrimo(array[i]) && !Ex02jlan2.esCapicua(array[i])) {
-      
-      System.out.println("El número NO es primo y NO es capicúa.");
-    }
+      if (Ex02jlan2.esPrimo(array[i])) {
+        System.out.print(" El número " + array[i] + " es primo y");
+       
+           
+      }else{
+        System.out.print(" El número " + array[i] + " no es primo y");
+      }
+      if (Ex02jlan2.esCapicua(array[i])) {
+        System.out.println(" es capicúa.");  
+      } else {
+        System.out.println(" no es capicúa.");
+      }
     }
   }
   
