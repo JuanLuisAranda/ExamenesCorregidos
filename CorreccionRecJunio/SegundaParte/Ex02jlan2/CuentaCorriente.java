@@ -1,4 +1,4 @@
-package Ex02jlan3;
+package Ej03;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Juan Luis Aranda Navarro
  */
 class CuentaCorriente {
-  
+
   ArrayList<CuentaCorriente> a = new ArrayList<>();
 
   private String numCuenta = "";
@@ -28,7 +28,7 @@ class CuentaCorriente {
       numCuenta += (int) (Math.random() * 10);
     }
   }
-
+  
   public double getSaldo() {
     return saldo;
   }
@@ -36,41 +36,44 @@ class CuentaCorriente {
   public void setSaldo(double saldo) {
     this.saldo = saldo;
   }
-  
-  
-
-  @Override
-  public String toString() {
-    return "Número de cta: " + numCuenta + " Saldo: " + (saldo-transferencia) + " €";
-  }
 
   void ingreso(double ingreso) {
-    saldo += ingreso;
+    this.ingreso = ingreso;
   }
-  
+
   public void setIngreso(double ingreso) {
-     this.ingreso =+ this.saldo;
+    this.ingreso = +this.saldo;
   }
 
   void cargo(double cargo) {
-      saldo -= cargo;
-    }  
+    this.cargo = cargo;
+  }
+
+  public void setCargo(double cargo) {
+    this.cargo = +this.saldo;
+  }
 
   void transferencia(CuentaCorriente cuenta3, double transferencia) {
     this.transferencia = transferencia;
-    double suma = (this.getTransferencia() + cuenta3.getSaldo());
-    cuenta3.setSaldo(suma);
   }
 
+  public void setTransferencia(CuentaCorriente cuenta3, double transferencia) {
+    this.transferencia = +this.transferencia;
+    this.transferencia = -this.transferencia;
+  }
 
   public double getTransferencia() {
     return transferencia;
   }
-  
-    
+  void movimientos() {
+      this.movimientos = movimientos;
+      
+    }
 
-  
-  
-  
-  
+    @Override
+    public String toString() {
+      return "Movimientos de la cuenta " + numCuenta + "\n-----------------------------------";
+    }
+
+
 }
